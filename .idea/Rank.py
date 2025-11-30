@@ -25,7 +25,7 @@ df_highest = df2.filter(col("dense_rank") == 2)
 
 # Lowest salary per dept
 df8 = df.withColumn("Lowest_Salary", rank().over(y))
-df_lowest = df8.filter(col("Lowest_Salary") == 1)
+df_lowest1 = df8.filter(col("Lowest_Salary") == 1)
 
 df_highest.show()
-df_lowest.show()
+df_lowest1.show()
